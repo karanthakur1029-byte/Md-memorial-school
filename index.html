@@ -1132,6 +1132,12 @@ footer strong{
         📞 Call School
       </a>
 
+    <a class="btn primary" href="javascript:void(0)" onclick="openAdmissionForm()" style="margin-left:10px;">
+      📝 Online Admission
+</a>
+      
+</a>
+
     </div>
 
 <!-- REQUIRED DOCUMENTS -->
@@ -1231,7 +1237,7 @@ footer strong{
 </section>
 
     <!-- ONLINE ADMISSION FORM -->
-<section id="admission-form">
+<section id="admission-form" style="display:none;">
   <div class="container">
 
     <div class="title">
@@ -1246,7 +1252,7 @@ footer strong{
 
         <div class="form-group">
           <label>Application No. *</label>
-          <input type="text" placeholder="Enter Application No." required>
+          <input type="text" required>
         </div>
 
         <div class="form-group">
@@ -1256,12 +1262,12 @@ footer strong{
 
         <div class="form-group">
           <label>Student Name *</label>
-          <input type="text" placeholder="Enter Student Name" required>
+          <input type="text" required>
         </div>
 
         <div class="form-group">
           <label>Father / Mother Name *</label>
-          <input type="text" placeholder="Enter Father / Mother Name" required>
+          <input type="text" required>
         </div>
 
         <div class="form-group">
@@ -1296,18 +1302,17 @@ footer strong{
 
         <div class="form-group">
           <label>Student Aadhaar</label>
-          <input type="text" placeholder="Enter Student Aadhaar Number"
-                 maxlength="12" inputmode="numeric">
+          <input type="text" maxlength="12" inputmode="numeric">
         </div>
 
         <div class="form-group">
           <label>PEN Number</label>
-          <input type="text" placeholder="Enter PEN Number">
+          <input type="text">
         </div>
 
         <div class="form-group">
           <label>Previous School</label>
-          <input type="text" placeholder="Enter Previous School Name">
+          <input type="text">
         </div>
 
         <div class="form-group">
@@ -1322,19 +1327,17 @@ footer strong{
 
         <div class="form-group">
           <label>Parent / Guardian Aadhaar</label>
-          <input type="text" placeholder="Enter Parent Aadhaar Number"
-                 maxlength="12" inputmode="numeric">
+          <input type="text" maxlength="12" inputmode="numeric">
         </div>
 
         <div class="form-group">
           <label>Address *</label>
-          <textarea placeholder="Enter Full Address" rows="3" required></textarea>
+          <textarea rows="3" required></textarea>
         </div>
 
         <div class="form-group">
           <label>WhatsApp Number *</label>
-          <input type="tel" placeholder="Enter WhatsApp Number"
-                 maxlength="10" inputmode="numeric" required>
+          <input type="tel" maxlength="10" inputmode="numeric" required>
         </div>
 
         <button type="submit" class="btn primary">
@@ -1443,6 +1446,17 @@ footer strong{
 >
   ☎
 </a>
+
+  <script>
+function openAdmissionForm() {
+  const form = document.getElementById("admission-form");
+
+  if (form) {
+    form.style.display = "block";
+    form.scrollIntoView({ behavior: "smooth" });
+  }
+}
+</script>
 
 </body>
 </html>
